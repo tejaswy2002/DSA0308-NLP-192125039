@@ -1,8 +1,8 @@
 import re
-pattern = r'J45\.20'
-asthma_code = 'J45.20'
-match = re.search(pattern, asthma_code)
-if match:
-    print('Match found!')
-else:
-    print('No match found.')
+text = "Hello, my email is bysanichinnari@gmail.com and my phone number is 6309715569."
+email_pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+phone_pattern = r'\b[0-9]{10}\b'
+emails = re.findall(email_pattern, text)
+print("Email addresses found:", emails)
+phones = re.findall(phone_pattern, text)
+print("Phone numbers found:", phones)
