@@ -1,0 +1,8 @@
+import re
+pattern = r'J45\.20'
+asthma_code = 'J45.20'
+match = re.search(pattern, asthma_code)
+if match:
+    print('Match found!')
+else:
+    print('No match found.')
